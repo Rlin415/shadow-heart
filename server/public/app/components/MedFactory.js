@@ -7,7 +7,7 @@ let MedFactory = function($http) {
   let getMeds = (user) => {
     return $http({
       method: 'GET',
-      url: 'http://localhost:3000/api/medications',
+      url: '/api/medications',
       data: user
     })
     .then(response =>  {
@@ -20,7 +20,7 @@ let MedFactory = function($http) {
   let deleteMed = (medId) => {
     return $http({
       method: 'DELETE',
-      url: 'http://localhost:3000/api/medications/' + medId
+      url: '/api/medications/' + medId
     })
     .then(response =>  {
       return response.data;
@@ -32,7 +32,7 @@ let MedFactory = function($http) {
   let editMed = (user) => {
     return $http({
       method: 'PUT',
-      url: 'http://localhost:3000/api/medications/' + user,
+      url: '/api/medications/' + user,
       data: user
     })
     .then(response =>  {
@@ -48,8 +48,8 @@ let MedFactory = function($http) {
     getMeds,
     deleteMed,
     editMed
-  }
+  };
 
-}
+};
 
 export default MedFactory;

@@ -17,7 +17,7 @@ let AuthFactory = ($window, $state, $http) => {
     let signin = (user) => {
       return $http({
           method: 'POST',
-          url: 'http://localhost:3000/user/signin',
+          url: '/user/signin',
           data: user
       })
       .then(response =>  {
@@ -30,7 +30,7 @@ let AuthFactory = ($window, $state, $http) => {
       console.log("printing from the AuthFactory");
       return $http({
           method: 'POST',
-          url: 'http://localhost:3000/user/signup',
+          url: '/user/signup',
           data: user
       })
       .then(response => {

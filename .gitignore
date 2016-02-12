@@ -3,7 +3,5 @@ bower_components
 .jshintrc
 npm-debug.log
 node_modules
-dist/ 
 .sass-cache
 server/public/assets/css
-bundle.js
