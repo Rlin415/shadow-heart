@@ -58,7 +58,6 @@ class medicationsController {
   deleteItem(id, index) {
    this.MedFactory.deleteMed(id)
    .then(data => {
-    console.log(id);
      this.medications.splice(index, 1);
    })
    .catch(data => {
@@ -68,8 +67,6 @@ class medicationsController {
 
   editItem(user) {
    this.MedFactory.medData = user;
-   console.log('editItem:');
-   console.log(this.MedFactory.medData);
    this.state.go('editMedication');
   }
   startNotifications() {
@@ -100,12 +97,10 @@ class medicationsController {
 
       if (alarm) {
         setTimeout(function() {
-          console.log('displayed notification');
           let notification = new Notification(date.title, {
             body: date.text
           });
           setTimeout(function() {
-            console.log('closed notification');
             notification.close.call(notification);
           }, 4000);
 
